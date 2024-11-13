@@ -35,5 +35,5 @@ jobs:
         with:
           context: ${{ matrix.platform }}/target/docker/stage
           file: ${{ matrix.platform }}/target/docker/stage/Dockerfile
-          tags: ghcr.io/${{ github.repository }}/opensnowcat-collector-${{ matrix.platform }}:latest
+          tags: ghcr.io/${{ github.repository }}/opensnowcat-enrich-${{ matrix.platform }}:latest
           push: true
