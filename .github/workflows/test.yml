@@ -1,11 +1,6 @@
 name: test
 
-on:
-  push:
-    branches:
-      - '**'
-    tags-ignore:
-      - '**'
+on: workflow_dispatch
 
 jobs:
   test:
