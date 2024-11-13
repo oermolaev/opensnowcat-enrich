@@ -38,7 +38,7 @@ jobs:
       - name: Push image
         uses: docker/build-push-action@v6
         with:
-          context: ${{ steps.baseDirectory.outputs.directory }}/target/docker/stage
-          file: ${{ steps.baseDirectory.outputs.directory }}/target/docker/stage/Dockerfile
+          context: modules/${{ matrix.platform }}/target/docker/stage
+          file: modules/${{ matrix.platform }}/target/docker/stage/Dockerfile
           tags: ghcr.io/${{ github.repository }}/opensnowcat-enrich-${{ matrix.platform }}:latest
           push: true
