@@ -170,10 +170,10 @@ jobs:
         #tags: ${{ steps.meta.outputs.tags }}
 # TODO: tags to push images to GitHub Container Registry
         tags: |
-          ghcr.io/${{ github.repository }}/opensnowcat-enrich-${{ matrix.platform }}${{ matrix.suffix }}:latest
-          ghcr.io/${{ github.repository }}/opensnowcat-enrich-${{ matrix.platform }}${{ matrix.suffix }}:latest-focal
-          ghcr.io/${{ github.repository }}/opensnowcat-enrich-${{ matrix.platform }}${{ matrix.suffix }}:${{ steps.ver.outputs.project_version }}
-          ghcr.io/${{ github.repository }}/opensnowcat-enrich-${{ matrix.platform }}${{ matrix.suffix }}:${{ steps.ver.outputs.project_version }}-focal
+          ghcr.io/${{ github.repository }}/opensnowcat-enrich-${{ matrix.app }}${{ matrix.suffix }}:latest
+          ghcr.io/${{ github.repository }}/opensnowcat-enrich-${{ matrix.app }}${{ matrix.suffix }}:latest-focal
+          ghcr.io/${{ github.repository }}/opensnowcat-enrich-${{ matrix.app }}${{ matrix.suffix }}:${{ steps.ver.outputs.project_version }}
+          ghcr.io/${{ github.repository }}/opensnowcat-enrich-${{ matrix.app }}${{ matrix.suffix }}:${{ steps.ver.outputs.project_version }}-focal
 
     - name: Push distroless image
       uses: docker/build-push-action@v2
@@ -185,8 +185,8 @@ jobs:
         #tags: ${{ steps.distroless-meta.outputs.tags }}
 # TODO: tags to push images to GitHub Container Registry
         tags: |
-          ghcr.io/${{ github.repository }}/opensnowcat-enrich-${{ matrix.platform }}${{ matrix.suffix }}:latest-distroless
-          ghcr.io/${{ github.repository }}/opensnowcat-enrich-${{ matrix.platform }}${{ matrix.suffix }}:${{ steps.ver.outputs.project_version }}-distroless
+          ghcr.io/${{ github.repository }}/opensnowcat-enrich-${{ matrix.app }}${{ matrix.suffix }}:latest-distroless
+          ghcr.io/${{ github.repository }}/opensnowcat-enrich-${{ matrix.app }}${{ matrix.suffix }}:${{ steps.ver.outputs.project_version }}-distroless
 
 # TODO: Enable me when sonatype is configured
 #  publish_sce:
