@@ -2,6 +2,7 @@
 name: Update Dependency Graph
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main # default branch of the project
